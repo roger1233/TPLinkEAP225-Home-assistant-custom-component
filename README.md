@@ -20,11 +20,6 @@ eap225:
   # then you need to provide username and password to log into it (the same credentials you used in the web interface)
   username: abcdefg
   password: hijklm
-  # finally a list of interfaces to query. Normally ath0 is the first 2.4ghz interface, ath1 is the second, etc and ath10 is the first 5ghz interface
-  interfaces:
-  - ath0
-  - ath1
-  - ath10
 ```
 
 Then, in your binary sensors (either the binary_sensors: section of configuration.yaml or your binary_sensors.yaml file)
