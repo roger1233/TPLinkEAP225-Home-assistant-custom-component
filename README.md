@@ -17,7 +17,7 @@ eap225:
 
   \# host is the ip of the EAP225 access point
   
-  host: 192.168.3.4 # the ip of the EAP225 access point
+  host: 192.168.3.4
   
   \# then you need to provide username and password to log into it (the same credentials you used in the web interface)
   
