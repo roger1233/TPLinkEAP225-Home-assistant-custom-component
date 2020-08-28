@@ -1,7 +1,7 @@
 {
   "domain": "eap225",
-  "name": "Example Sensor",
-  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/example_sensor/",
+  "name": "TPLink Presence EAP225 binary sensor",
+  "documentation": "https://github.com/roger1233/TPLinkEAP225",
   "dependencies": [],
   "codeowners": [],
   "requirements": ["paramiko"]
