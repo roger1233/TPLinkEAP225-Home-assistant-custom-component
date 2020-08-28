@@ -30,7 +30,6 @@ class EAP225Client():
     self.host = config[DOMAIN].get("host")
     self.username = config[DOMAIN].get("username")
     self.password = config[DOMAIN].get("password")
-    self.interfaces = config[DOMAIN].get("interfaces")
 
   def get_macs(self):
     self.updateIfNeeded()
@@ -49,10 +48,13 @@ class EAP225Client():
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(self.host, username=self.username, password=self.password)
-
+    
+    stdin, stdout, stderr = ssh.exec_command("iwconfig")
+    interfaces = re.findall("ath[0-9]+",str(stdout.read()))
+    
     txt = ""
-    for int in self.interfaces:
-      cmd = "wlanconfig %s list" % int
+    for int in interfaces:
+      cmd = f"wlanconfig {int} list"
 
       stdin, stdout, stderr = ssh.exec_command(cmd)
       txt = txt + str(stdout.read())
@@ -72,6 +74,3 @@ class EAP225Client():
 
   def updateIfNeeded(self):
     if self.lastUpdate + SCAN_INTERVAL < datetime.now(): self.update()
-        
-    
-  
