@@ -6,7 +6,7 @@ With this custom component, you'll be able to detect a single MAC address in a T
 Here are the steps:
 
 First, you need to log in the EAP225 and create an SSH access (Management - SSH - port: 22, enable)
-![tplink screenshot](images/tplink ssh enable.png)
+![tplink_screenshot](images/tplink_ssh_enable.png)
 
 Then, copy the custom_component in your Home Assistant Config subdirectory (the directory where configuration.yaml is)
 
