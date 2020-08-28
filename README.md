@@ -38,8 +38,10 @@ eap225:
 Then, in your binary sensors (either the binary_sensors: section of configuration.yaml or your binary_sensors.yaml file)
 
 binary_sensor:
-  - platform: eap225
-    name: presence_mac1
+  
+  \- platform: eap225
+   
+   name: presence_mac1
     
     \# make sure the mac address is lowercase and separated with :
     
