@@ -15,11 +15,14 @@ Then, in configuration.yaml, add the following:
 
 eap225:
   \# host is the ip of the EAP225 access point
+  
   host: 192.168.3.4 # the ip of the EAP225 access point
   \# then you need to provide username and password to log into it (the same credentials you used in the web interface)
+  
   username: abcdefg
   password: hijklm
   \# finally a list of interfaces to query. Normally ath0 is the first 2.4ghz interface, ath1 is the second, etc and ath10 is the first ghz interface
+  
   interfaces:
   - ath0
   - ath1
@@ -31,6 +34,7 @@ binary_sensor:
   - platform: eap225
     name: presence_mac1
     \# make sure the mac address is lowercase and separated with :
+    
     mac: aa:bb:cc:dd:ee:ff
     
 Then restart home assistant, and you should have a new binary sensor named presence_mac1 that will follow the presence of this mac address on the eap225
