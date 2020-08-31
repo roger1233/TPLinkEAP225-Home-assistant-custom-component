@@ -1,0 +1,5 @@
+{
+  "name": "TPLink EAP225 presence detector by MAC address",
+  "content_in_root": false,
+  "iot_class": ["Local Polling"]
+}
