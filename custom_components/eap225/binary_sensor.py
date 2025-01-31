@@ -2,7 +2,7 @@ from homeassistant.const import STATE_OFF, STATE_ON
 import logging
 from homeassistant.helpers.entity import Entity
 from . import DOMAIN
-from homeassistant.components.binary_sensor import DEVICE_CLASS_PRESENCE
+from homeassistant.components.binary_sensor import BinarySensorDeviceClass
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ class eap225Sensor(Entity):
   @property
   def device_class(self):
     """Return the class of this device, from component DEVICE_CLASSES."""
-    return DEVICE_CLASS_PRESENCE
+    return BinarySensorDeviceClass.PRESENCE
     
   def update(self):
     #_LOGGER.warning(f"Updating {self._name}")
