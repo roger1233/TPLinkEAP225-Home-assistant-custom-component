@@ -1,5 +1,6 @@
 {
   "name": "TPLink EAP225 presence detector by MAC address",
   "content_in_root": false,
-  "iot_class": ["Local Polling"]
+  "iot_class": ["Local Polling"],
+  "homeassistant": "2022.1.0",
 }

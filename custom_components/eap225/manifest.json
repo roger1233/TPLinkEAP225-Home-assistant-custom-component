@@ -3,6 +3,7 @@
   "name": "TPLink Presence EAP225 binary sensor",
   "documentation": "https://github.com/roger1233/TPLinkEAP225",
   "dependencies": [],
-  "codeowners": [],
-  "requirements": ["paramiko"]
+  "codeowners": ["roger1233", "j54j6"],
+  "requirements": ["paramiko"],
+  "version": "1.1.1"
 }
