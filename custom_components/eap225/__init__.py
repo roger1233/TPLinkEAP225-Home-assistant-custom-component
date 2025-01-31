@@ -6,12 +6,12 @@ from datetime import timedelta
 from datetime import datetime
 
 DOMAIN = "eap225"
-SCAN_INTERVAL = timedelta(seconds=30)
+SCAN_INTERVAL = timedelta(seconds=2)
 
 _LOGGER = logging.getLogger(__name__)
 
 def setup(hass, config):
-    _LOGGER.warning("starting")
+    _LOGGER.debug("starting")
     
     api = EAP225Client(config)
     hass.data[DOMAIN] = api
